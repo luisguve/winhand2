@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+nav h1 {
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  nav h1 {
+    font-size: 1.4rem;
+  }
+}
+nav h2 {
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  nav h2 {
+    font-size: 1.2rem;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.mayus {
+  text-transform: uppercase;
+}
+
+.fondo-azul {
+  background: #26c2ff;
+}
+
+.fondo-negro {
+  background: #1b1b1b;
+}
+
+.fondo-morado {
+  background: #9933cc;
+}
+
+.fondo-blanco {
+  background: white;
+}
+
+.texto-blanco {
+  color: white;
+}
+
+.texto-negro {
+  color: #131313;
+}
+
+.texto-morado {
+  color: fuchsia;
+}
+
+.sombreado {
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.66);
+}
+.sombreado .sobrepuesto {
+  position: relative;
+}
+
+.d-inline-block {
+  display: inline-block;
+}
+
+.texto-sombreado {
+  text-shadow: 0 -5px 0 black;
+}
+
+.texto-sombreado-2 {
+  text-shadow: 3px 4px 5px #313131;
+}
+
+a.btn {
+  font-family: sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+  background: #fff;
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+a.btn.btn-negro {
+  background: #282828;
+  color: white;
+}
+a.btn.btn-negro:hover {
+  background: #646464;
+}
+@media screen and (min-width: 992px) {
+  a.btn {
+    font-size: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=global.css.map */

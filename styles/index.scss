@@ -1,0 +1,374 @@
+nav {
+  position: relative;
+  section {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 20px;
+    @media screen and (min-width: 768px) {
+      padding: 15px 40px;
+    }
+  }
+  .contenedor-logo {
+    position: absolute;
+    z-index: 2;
+    top: 1.2rem;
+    left: 0;
+    width: 52%;
+    @media screen and (min-width: 768px) {
+      top: 0.5rem;
+      left: 2.5rem;
+      width: 35%;
+    }
+    @media screen and (min-width: 992px) {
+      top: 0;
+      left: 40px;
+      width: 45%;
+    }
+  }
+}
+.hero {
+  background-image: url("/public/img/fondo banner.png");
+  background-size: cover;
+  background-position-x: 80%;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (min-width: 992px) {
+    justify-content: flex-end;
+    background-size: contain;
+    background-position: center;
+    height: 54vw;
+  }
+  .contenedor-hero {
+    background: rgba(0,0,0,0.4);
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    @media screen and (min-width: 768px) {
+      background: none;
+    }
+    @media screen and (min-width: 992px) {
+      flex-direction: column;
+      display: block;
+      padding-bottom: 4rem;
+    }
+    @media screen and (min-width: 1400px) {
+      padding-bottom: 6rem;
+    }
+    .contenedor-img {
+      width: 70%;
+      align-self: center;
+      @media screen and (max-width: 767px) {
+        &.ocultar-movil {
+          display: none;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        &.ocultar-tablet {
+          display: none;
+        }
+        align-self: flex-start;
+        width: 47%;
+      }
+    }
+    .descripcion {
+      font-family: sans-serif;
+      font-weight: 900;
+      text-transform: capitalize;
+      display: block;
+      padding: 2rem 0;
+      @media screen and (min-width: 768px) {
+        padding: 0;
+        width: 60%;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      @media screen and (min-width: 992px) {
+        width: 50%;
+        top: -3.125rem;
+        right: 3.75rem;
+      }
+      .texto-blanco {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (min-width: 768px) {
+          display: block;
+        }
+        .texto-sombreado {
+          display: flex;
+          flex-direction: column;
+          @media screen and (min-width: 768px) {
+            display: block;
+          }
+        }
+      }
+      p {
+        line-height: 1.4;
+        font-size: 1.8rem;
+        display: inline-block;
+        &.mayor {
+          font-size: 2rem;
+        }
+        @media screen and (min-width: 768px) {
+          display: block;
+          line-height: 1;
+          &.left {
+            text-align: left;
+          }
+          &.salido {
+            margin-left: -1rem;
+          }
+          &.right {
+            text-align: right;
+          }
+          font-size: 2.5rem;
+          &.mayor {
+            font-size: 3rem;
+          }
+          padding-left: 2rem;
+          padding-right: 2rem;
+        }
+        @media screen and (min-width: 992px) {
+          font-size: 3.3rem;
+          line-height: 0.9;
+          &.mayor {
+            font-size: 4rem;
+          }
+          padding: 0;
+        }
+        @media screen and (min-width: 1200px) {
+          font-size: 4.375rem;
+          line-height: 0.8;
+          &.mayor {
+            font-size: 5rem;
+          }
+          padding: 0;
+        }
+      }
+      .center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        div {
+          display: flex;
+          flex-direction: column;
+          @media screen and (min-width: 768px) {
+            display: block;
+          }
+        }
+        @media screen and (min-width: 992px) {
+          margin-top: 60px;
+        }
+        p {
+          font-size: 1.4rem;
+          @media screen and (min-width: 992px) {
+            font-size: 2.7rem;
+            &.mayor {
+              font-size: 3.2rem;
+            }
+          }
+          @media screen and (min-width: 1200px) {
+            font-size: 3.125rem;
+            &.mayor {
+              font-size: 3.75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.banner2 {
+  .presentacion {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
+    .descripcion, .link {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @media screen and (min-width: 768px) {
+        width: 50%;
+      }
+    }
+    .descripcion {
+      margin-bottom: 1rem;
+      @media screen and (min-width: 768px) {
+        margin: 0;
+      }
+    }
+    p {
+      font-family: sans-serif;
+      font-weight: 900;
+      font-size: 0.8rem;
+      &.mayor {
+        font-size: 1.2rem;
+        margin-bottom: 0.2rem;
+      }
+      @media screen and (min-width: 768px) {
+        font-size: 1.1rem;
+        &.mayor {
+          font-size: 1.6rem;
+          margin-bottom: 0;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        font-size: 1.4rem;
+        &.mayor {
+          font-size: 2rem;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .contenedor-objetivos {
+    background: url("/public/img/fondo.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    .contenedor-donaplay {
+      @media screen and (min-width: 768px) {
+        background-image: url("/public/img/donaplay.png");
+        background-repeat: no-repeat;
+        background-position: 150% center;
+      }
+      @media screen and (min-width: 992px) {
+        background-position-x: 90%;
+      }
+    }
+    .objetivos {
+      padding: 7rem 1rem;
+      @media screen and (min-width: 992px) {
+        width: 60%;
+        padding: 11.9rem 3.75rem;
+      }
+      .cabecera {
+        @media screen and (min-width: 768px) {
+          font-size: 1.5rem;
+          width: 60%
+        }
+        @media screen and (min-width: 992px) {
+          font-size: 2rem;
+          width: 100%;
+        }
+      }
+      .distribucion {
+        margin-top: 1rem;
+        font-size: 1.1rem;
+        font-weight: 550;
+        @media screen and (min-width: 768px) {
+          font-size: 2rem;
+          margin-left: 2.5rem;
+        }
+      }
+    }
+  }
+}
+.contenedor-registro {
+  background: rgb(255,230,165);
+  background: linear-gradient(152deg, rgba(255,230,165,1) 0%, rgba(168,55,173,1) 50%, rgba(4,174,210,1) 100%);
+  padding: 3rem 1rem;
+  @media screen and (min-width: 768px) {
+    padding: 9.375rem 4.375rem;
+  }
+  .registro {
+    background: url("/public/img/loteria ttt.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    .links {
+      width: 400px;
+    }
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    @media screen and (min-width: 768px) {
+      justify-content: space-between;
+    }
+    .contenido {
+      height: 22rem;
+      margin: 0 10px;
+      @media screen and (min-width: 992px) {
+        margin: 0 20px;
+        height: 28rem;
+      }
+    }
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+      margin: 1rem 0;
+      @media screen and (min-width: 768px) {
+        &:nth-child(even) {
+          margin-bottom: -2rem;
+        }
+        &:nth-child(odd) {
+          margin-top: -2rem;
+        }
+        width: 25%;
+      }
+    }
+    .cabecera {
+      padding: 1rem 0;
+      .contenedor-icono {
+        width: 70%;
+        margin: auto;
+        @media screen and (min-width: 768px) {
+          width: 80%;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        padding: 2rem 0;
+        clip-path: polygon(
+          0 0, /* left top */
+          100% 0, /* right top */ 
+          100% 85%, /* right bottom */
+          0 100% /* left bottom */
+        );
+      }
+    }
+    .desc {
+      margin-top: 1rem;
+      h2 {
+        text-align: center;
+        font-size: 1.3rem;
+      }
+      h3 {
+        font-size: 0.9rem;
+        margin: 2rem 0.5rem;
+        text-align: center;
+        color: #f7dfff;
+      }
+      @media screen and (min-width: 768px) {
+        h2 {
+          font-size: 1rem;
+        }
+        h3 {
+          margin: 0.5rem;
+          text-align: left;
+          display: inline-block;
+          font-size: 0.7rem;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        margin-left: 1rem;
+        h2 {
+          text-align: left;
+        }
+        h3 {
+          text-align: left;
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
