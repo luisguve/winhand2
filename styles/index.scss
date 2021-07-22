@@ -51,10 +51,10 @@ nav {
     @media screen and (min-width: 992px) {
       flex-direction: column;
       display: block;
-      padding-bottom: 4rem;
+      height: 75%;
     }
     @media screen and (min-width: 1400px) {
-      padding-bottom: 6rem;
+      height: 70%;
     }
     .contenedor-img {
       width: 70%;
