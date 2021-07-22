@@ -237,7 +237,8 @@ nav {
       @media screen and (min-width: 768px) {
         background-image: url("/public/img/donaplay.png");
         background-repeat: no-repeat;
-        background-position: 150% center;
+        background-position-x: calc(32vw + 218px);
+        background-position-y: center;
       }
       @media screen and (min-width: 992px) {
         background-position-x: 90%;

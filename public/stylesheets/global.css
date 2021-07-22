@@ -52,7 +52,15 @@ img {
   color: #131313;
 }
 
+.texto-azul {
+  color: #26c2ff;
+}
+
 .texto-morado {
+  color: #742096;
+}
+
+.texto-rosa {
   color: fuchsia;
 }
 

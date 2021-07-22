@@ -287,7 +287,8 @@ nav .contenedor-logo {
   .banner2 .contenedor-objetivos .contenedor-donaplay {
     background-image: url("/public/img/donaplay.png");
     background-repeat: no-repeat;
-    background-position: 150% center;
+    background-position-x: calc(32vw + 218px);
+    background-position-y: center;
   }
 }
 @media screen and (min-width: 992px) {
