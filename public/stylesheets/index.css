@@ -65,12 +65,12 @@ nav .contenedor-logo {
   .hero .contenedor-hero {
     flex-direction: column;
     display: block;
-    padding-bottom: 4rem;
+    height: 75%;
   }
 }
 @media screen and (min-width: 1400px) {
   .hero .contenedor-hero {
-    padding-bottom: 6rem;
+    height: 70%;
   }
 }
 .hero .contenedor-hero .contenedor-img {
