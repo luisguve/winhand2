@@ -358,12 +358,13 @@ nav .contenedor-logo {
   }
 }
 .contenedor-registro .cards .contenido {
-  height: 22rem;
-  margin: 0 10px;
+  min-height: 20rem;
+  margin: 0 0.6rem;
+  height: 100%;
 }
 @media screen and (min-width: 992px) {
   .contenedor-registro .cards .contenido {
-    margin: 0 20px;
+    margin: 0 1.25rem;
     height: 28rem;
   }
 }
@@ -372,6 +373,11 @@ nav .contenedor-logo {
   flex-direction: column;
   width: 80%;
   margin: 1rem 0;
+}
+@media screen and (min-width: 540px) {
+  .contenedor-registro .cards .card {
+    width: 50%;
+  }
 }
 @media screen and (min-width: 768px) {
   .contenedor-registro .cards .card {
@@ -388,8 +394,13 @@ nav .contenedor-logo {
   padding: 1rem 0;
 }
 .contenedor-registro .cards .cabecera .contenedor-icono {
-  width: 70%;
+  width: 35vw;
   margin: auto;
+}
+@media screen and (min-width: 540px) {
+  .contenedor-registro .cards .cabecera .contenedor-icono {
+    width: 70%;
+  }
 }
 @media screen and (min-width: 768px) {
   .contenedor-registro .cards .cabecera .contenedor-icono {
@@ -404,6 +415,7 @@ nav .contenedor-logo {
 }
 .contenedor-registro .cards .desc {
   margin-top: 1rem;
+  padding: 0 0.4rem;
 }
 .contenedor-registro .cards .desc h2 {
   text-align: center;
@@ -416,6 +428,9 @@ nav .contenedor-logo {
   color: #f7dfff;
 }
 @media screen and (min-width: 768px) {
+  .contenedor-registro .cards .desc {
+    padding: 0;
+  }
   .contenedor-registro .cards .desc h2 {
     font-size: 1rem;
   }

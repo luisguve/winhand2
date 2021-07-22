@@ -295,10 +295,11 @@ nav {
       justify-content: space-between;
     }
     .contenido {
-      height: 22rem;
-      margin: 0 10px;
+      min-height: 20rem;
+      margin: 0 0.6rem;
+      height: 100%;
       @media screen and (min-width: 992px) {
-        margin: 0 20px;
+        margin: 0 1.25rem;
         height: 28rem;
       }
     }
@@ -307,6 +308,9 @@ nav {
       flex-direction: column;
       width: 80%;
       margin: 1rem 0;
+      @media screen and (min-width: 540px) {
+        width: 50%;
+      }
       @media screen and (min-width: 768px) {
         &:nth-child(even) {
           margin-bottom: -2rem;
@@ -320,8 +324,11 @@ nav {
     .cabecera {
       padding: 1rem 0;
       .contenedor-icono {
-        width: 70%;
+        width: 35vw;
         margin: auto;
+        @media screen and (min-width: 540px) {
+          width: 70%;
+        }
         @media screen and (min-width: 768px) {
           width: 80%;
         }
@@ -338,6 +345,7 @@ nav {
     }
     .desc {
       margin-top: 1rem;
+      padding: 0 0.4rem;
       h2 {
         text-align: center;
         font-size: 1.3rem;
@@ -349,6 +357,7 @@ nav {
         color: #f7dfff;
       }
       @media screen and (min-width: 768px) {
+        padding: 0;
         h2 {
           font-size: 1rem;
         }
