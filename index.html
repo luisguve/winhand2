@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Winhand</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
   <link rel="stylesheet" type="text/css" href="public/stylesheets/global.css">
   <link rel="stylesheet" type="text/css" href="public/stylesheets/index.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,8 +15,26 @@
     <section class="fondo-negro texto-blanco sombreado sobrepuesto">
       <h1>Registrate</h1>
     </section>
-    <section class="fondo-azul texto-negro sombreado">
-      <h2>Nosotros</h2>
+    <section class="fondo-azul texto-negro sombreado navbar">
+      <div class="contenedor-menu">
+        <div id="menu">
+          <a href="#" class="close ocultar-pc">
+            <i class="fas fa-times"></i>
+          </a>
+          <a href="#">Nosotros</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="align-right ocultar-pc">
+        <span class="slide">
+          <a href="#">
+            <i class="fas fa-bars"></i>
+          </a>
+        </span>
+      </div>
     </section>
   </nav>
   <section class="hero">
@@ -135,5 +154,29 @@
       </div>
     </section>
   </section>
+
+  <!-- Javascript para el navbar -->
+  <script>
+    // Evita pasar el evento al contenedor al hacer click sobre el menu
+    document.querySelector("#menu").onclick = e => e.stopPropagation()
+
+    const contenedorMenu = document.querySelector(".contenedor-menu")
+    // Cierra el menu cuando se hace click fuera de el
+    contenedorMenu.onclick = () => cerrarMenu()
+
+    const btnCerrar = document.querySelector(".close")
+    btnCerrar.onclick = cerrarMenu
+
+    document.querySelector(".slide a").onclick = abrirMenu
+
+    function abrirMenu() {
+      contenedorMenu.classList.add("abierto")
+      menu.classList.add("abierto")
+    }
+    function cerrarMenu() {
+      contenedorMenu.classList.remove("abierto")
+      menu.classList.remove("abierto")
+    }
+  </script>
 </body>
 </html>

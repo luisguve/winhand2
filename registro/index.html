@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Registro</title>
+  <title>Responsive Animated Sidebar Menu</title>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <nav class="mayus">
-    <div class="align-right">Registrate</div>
-    <div class="align-right">Nosotros</div>
-  </nav>
-  <p>Registro</p>
+
+  <div id="content">
+
+    <div class="contenedor-menu">
+      <div id="menu" class="nav">
+        <a href="#" class="close">
+          <i class="fas fa-times"></i>
+        </a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <div class="align-right">
+      <span class="slide">
+        <a href="#">
+          <i class="fas fa-bars"></i>
+        </a>
+      </span>
+    </div>
+    <h1>Responsive Animated Sidebar Menu</h1>
+  </div>
+
+  <script>
+    // Evita pasar el evento al contenedor al hacer click sobre el menu
+    document.querySelector("#menu").onclick = e => e.stopPropagation()
+
+    const contenedorMenu = document.querySelector(".contenedor-menu")
+    // Cierra el menu cuando se hace click fuera de el
+    contenedorMenu.onclick = () => cerrarMenu()
+
+    const btnCerrar = document.querySelector(".close")
+    btnCerrar.onclick = cerrarMenu
+
+    document.querySelector(".slide a").onclick = abrirMenu
+
+    function abrirMenu() {
+      contenedorMenu.classList.add("abierto")
+      menu.classList.add("abierto")
+    }
+    function cerrarMenu() {
+      contenedorMenu.classList.remove("abierto")
+      menu.classList.remove("abierto")
+    }
+  </script>
+
+<!--- Check out my courses! 
+<div class="udemy-course" style="position: fixed; bottom: 0; right: 0; margin-bottom: -5px; z-index: 100;">
+  <a href="https://w3newbie.com/courses" target="_blank" style="z-index: 999!important; cursor: pointer!important;"><img src="https://www.w3newbie.com/wp-content/uploads/nuno-course-banner.png" style="max-width: 100%; min-width: 100%;"></a>
+</div>-->
+
+
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
