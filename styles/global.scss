@@ -12,15 +12,19 @@ nav {
     justify-content: flex-end;
     padding: 15px 20px;
     &.navbar {
-      padding: 0.3rem 2.5rem;
+      padding: 0 2.5rem;
+      height: 2.9rem;
+      display: flex;
+      align-items: center;
       @media screen and (min-width: 540px) {
-        padding: 0.39rem 2.5rem;
+        padding: 0 2.5rem;
       }
       @media screen and (min-width: 768px) {
-        padding: 0.5rem 2.5rem;
+        padding: 0 2.5rem;
       }
       @media screen and (min-width: 992px) {
-        padding: 0.7rem 2.5rem;
+        height: 3.5rem;
+        padding: 0 2.5rem;
       }
     }
     @media screen and (min-width: 768px) {
