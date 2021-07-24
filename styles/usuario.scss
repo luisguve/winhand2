@@ -33,6 +33,7 @@ main {
       }
     }
     @media screen and (min-width: 992px) {
+      min-height: calc(100vh - 12.4rem);
       max-height: calc(100vh - 12.4rem);
       .dashboard-central {
         max-height: calc(100vh - 12.4rem);
