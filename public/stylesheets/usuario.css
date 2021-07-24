@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/*
+* Estilos del layout
+*/
+main {
+  min-height: calc(100vh - 5.8rem);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(152deg, #ffe6a5 0%, #a837ad 50%, #04aed2 100%);
+}
+@media screen and (min-width: 992px) {
+  main {
+    min-height: calc(100vh - 6.4rem);
+  }
+}
+main content {
+  min-height: calc(100vh - 15.8rem);
+  background-image: url("/public/img/dashboard/fon-base.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 540px) {
+  main content {
+    min-height: calc(100vh - 11.8rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  main content {
+    flex-direction: row;
+    max-height: calc(100vh - 11.8rem);
+  }
+  main content .barra-izquierda, main content .barra-derecha {
+    width: 20%;
+  }
+  main content .dashboard-central {
+    width: 60%;
+    overflow: auto;
+    max-height: calc(100vh - 11.8rem);
+  }
+}
+@media screen and (min-width: 992px) {
+  main content {
+    max-height: calc(100vh - 12.4rem);
+  }
+  main content .dashboard-central {
+    max-height: calc(100vh - 12.4rem);
+  }
+}
+
+/*
+* Estilos de la barra izquierda
+*/
+.barra-izquierda {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.barra-izquierda .contenedor-btn {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 30%;
+  margin: 0 0.2rem;
+  padding: 0.5rem;
+  color: white;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+}
+.barra-izquierda .contenedor-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+}
+
+.barra-izquierda, .barra-derecha {
+  position: relative;
+}
+.barra-izquierda::before, .barra-derecha::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: brightness(1.5);
+}
+.barra-izquierda img, .barra-derecha img {
+  filter: brightness(1);
+}
+
+@media screen and (min-width: 768px) {
+  .barra-izquierda {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .barra-izquierda .contenedor-btn {
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    margin: 0.5rem 1rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .barra-izquierda .contenedor-btn {
+    font-size: 1.3rem;
+    flex-direction: row;
+  }
+}
+/*
+* Estilos del dashboard central
+*/
+.dashboard-central {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  /* Tamaño del scroll */
+  /* Estilos barra (thumb) de scroll */
+  /* Estilos track de scroll */
+}
+@media screen and (min-width: 768px) {
+  .dashboard-central {
+    align-items: center;
+  }
+}
+.dashboard-central .mensaje {
+  position: relative;
+  min-height: 12rem;
+  width: 85%;
+  padding-left: 0.4rem;
+}
+.dashboard-central .mensaje:not(:first-child) {
+  margin-top: 0.4rem;
+}
+@media screen and (min-width: 768px) {
+  .dashboard-central .mensaje {
+    min-height: 17rem;
+    width: 80%;
+    padding-left: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dashboard-central .mensaje {
+    width: 70%;
+  }
+}
+.dashboard-central .mensaje .contenido {
+  width: 100%;
+  min-height: 12rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 768px) {
+  .dashboard-central .mensaje .contenido {
+    height: 100%;
+  }
+}
+.dashboard-central .mensaje .acciones {
+  position: absolute;
+  top: 0;
+  right: -2.3rem;
+  display: flex;
+  flex-direction: column;
+  width: 2rem;
+}
+.dashboard-central .mensaje .acciones button {
+  padding: 0;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+}
+.dashboard-central .mensaje .acciones button:hover {
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.3);
+}
+.dashboard-central::-webkit-scrollbar {
+  width: 8px;
+}
+.dashboard-central::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.dashboard-central::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+.dashboard-central::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.dashboard-central::-webkit-scrollbar-track {
+  background: #e1e1e1;
+}
+.dashboard-central::-webkit-scrollbar-track:hover, .dashboard-central::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
+}
+
+/*
+* Estilos de la barra derecha
+*/
+.barra-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 540px) {
+  .barra-derecha {
+    flex-direction: row;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .barra-derecha {
+    padding: 0;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+}
+.barra-derecha .contenedor-img-perfil {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 540px) {
+  .barra-derecha .contenedor-img-perfil {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .barra-derecha .contenedor-img-perfil {
+    width: 100%;
+    max-width: 11rem;
+  }
+}
+.barra-derecha .contenedor-estadisticas {
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .barra-derecha .contenedor-estadisticas {
+    margin-top: -1.5rem;
+  }
+}
+@media screen and (min-width: 540px) {
+  .barra-derecha .estadisticas {
+    padding-left: 1.7rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .barra-derecha .estadisticas {
+    padding: 0 0.8rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .barra-derecha .estadisticas {
+    padding: 0 1.7rem;
+  }
+}
+.barra-derecha .dato {
+  position: relative;
+}
+.barra-derecha .dato .contenedor-icono {
+  max-width: 5rem;
+  margin-left: auto;
+}
+@media screen and (min-width: 768px) {
+  .barra-derecha .dato .contenedor-icono {
+    max-width: 2.4rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .barra-derecha .dato .contenedor-icono {
+    max-width: 5rem;
+  }
+}
+.barra-derecha .dato .contenedor-num {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.barra-derecha .dato .contenedor-num p {
+  background: rgba(255, 255, 255, 0.5);
+  padding: 0.5rem;
+  padding-left: 0.9rem;
+  margin-right: 0.5rem;
+  border-radius: 0.3rem;
+  color: white;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=usuario.css.map */

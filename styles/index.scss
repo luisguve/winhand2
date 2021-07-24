@@ -150,52 +150,6 @@
 .banner2 {
   // Este fondo es para cuando el fondo de la seccion de objetivos este cargando.
   background: linear-gradient(90deg, #ffa5a5 0%, #d05dd2 50%, #5147e2 100%);
-  .presentacion {
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    @media screen and (min-width: 768px) {
-      flex-direction: row;
-    }
-    .descripcion, .link {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      @media screen and (min-width: 768px) {
-        width: 50%;
-      }
-    }
-    .descripcion {
-      margin-bottom: 1rem;
-      @media screen and (min-width: 768px) {
-        margin: 0;
-      }
-    }
-    p {
-      font-family: sans-serif;
-      font-weight: 900;
-      font-size: 0.8rem;
-      &.mayor {
-        font-size: 1.2rem;
-        margin-bottom: 0.2rem;
-      }
-      @media screen and (min-width: 768px) {
-        font-size: 1.1rem;
-        &.mayor {
-          font-size: 1.6rem;
-          margin-bottom: 0;
-        }
-      }
-      @media screen and (min-width: 992px) {
-        font-size: 1.4rem;
-        &.mayor {
-          font-size: 2rem;
-          margin-bottom: 0;
-        }
-      }
-    }
-  }
   .contenedor-objetivos {
     background: url("/public/img/fondo.png");
     background-size: cover;

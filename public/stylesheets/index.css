@@ -183,62 +183,6 @@
 .banner2 {
   background: linear-gradient(90deg, #ffa5a5 0%, #d05dd2 50%, #5147e2 100%);
 }
-.banner2 .presentacion {
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (min-width: 768px) {
-  .banner2 .presentacion {
-    flex-direction: row;
-  }
-}
-.banner2 .presentacion .descripcion, .banner2 .presentacion .link {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-@media screen and (min-width: 768px) {
-  .banner2 .presentacion .descripcion, .banner2 .presentacion .link {
-    width: 50%;
-  }
-}
-.banner2 .presentacion .descripcion {
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 768px) {
-  .banner2 .presentacion .descripcion {
-    margin: 0;
-  }
-}
-.banner2 .presentacion p {
-  font-family: sans-serif;
-  font-weight: 900;
-  font-size: 0.8rem;
-}
-.banner2 .presentacion p.mayor {
-  font-size: 1.2rem;
-  margin-bottom: 0.2rem;
-}
-@media screen and (min-width: 768px) {
-  .banner2 .presentacion p {
-    font-size: 1.1rem;
-  }
-  .banner2 .presentacion p.mayor {
-    font-size: 1.6rem;
-    margin-bottom: 0;
-  }
-}
-@media screen and (min-width: 992px) {
-  .banner2 .presentacion p {
-    font-size: 1.4rem;
-  }
-  .banner2 .presentacion p.mayor {
-    font-size: 2rem;
-    margin-bottom: 0;
-  }
-}
 .banner2 .contenedor-objetivos {
   background: url("/public/img/fondo.png");
   background-size: cover;

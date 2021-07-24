@@ -1,0 +1,264 @@
+/*
+* Estilos del layout
+*/
+main {
+  min-height: calc(100vh - 5.8rem);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 992px) {
+    min-height: calc(100vh - 6.4rem);
+  }
+  background: linear-gradient(152deg, rgba(255,230,165,1) 0%, rgba(168,55,173,1) 50%, rgba(4,174,210,1) 100%);
+  content {
+    min-height: calc(100vh - 15.8rem);
+    background-image: url("/public/img/dashboard/fon-base.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    @media screen and (min-width: 540px) {
+      min-height: calc(100vh - 11.8rem);
+    }
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      max-height: calc(100vh - 11.8rem);
+      .barra-izquierda, .barra-derecha {
+        width: 20%;
+      }
+      .dashboard-central {
+        width: 60%;
+        overflow: auto;
+        max-height: calc(100vh - 11.8rem);
+      }
+    }
+    @media screen and (min-width: 992px) {
+      max-height: calc(100vh - 12.4rem);
+      .dashboard-central {
+        max-height: calc(100vh - 12.4rem);
+      }
+    }
+  }
+}
+/*
+* Estilos de la barra izquierda
+*/
+.barra-izquierda {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem 0;
+  .contenedor-btn {
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 30%;
+    margin: 0 0.2rem;
+    padding: 0.5rem;
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    &:hover {
+      background: rgba(0,0,0,0.7);
+      cursor: pointer;
+    }
+  }
+}
+.barra-izquierda, .barra-derecha {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: brightness(1.5);
+  }
+  img {
+    filter: brightness(1);
+  }
+}
+@media screen and (min-width: 768px) {
+  .barra-izquierda {
+    flex-direction: column;
+    justify-content: flex-start;
+    .contenedor-btn {
+      background: rgba(0,0,0,0.5);
+      max-width: 100%;
+      margin: 0.5rem 1rem;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .barra-izquierda {
+    .contenedor-btn {
+      font-size: 1.3rem;
+      flex-direction: row;
+    }
+  }
+}
+
+/*
+* Estilos del dashboard central
+*/
+.dashboard-central {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 768px) {
+    align-items: center;
+  }
+  .mensaje {
+    position: relative;
+    min-height: 12rem;
+    width: 85%;
+    padding-left: 0.4rem;
+    &:not(:first-child) {
+      margin-top: 0.4rem;
+    }
+    @media screen and (min-width: 768px) {
+      min-height: 17rem;
+      width: 80%;
+      padding-left: 0;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 70%;
+    }
+    .contenido {
+      width: 100%;
+      min-height: 12rem;
+      background: rgba(0,0,0,0.5);
+      @media screen and (min-width: 768px) {
+        height: 100%;
+      }
+    }
+    .acciones {
+      position: absolute;
+      top: 0;
+      right: -2.3rem;
+      display: flex;
+      flex-direction: column;
+      width: 2rem;
+      button {
+        padding: 0;
+        background: rgba(0,0,0,0);
+        border: none;
+        &:hover {
+          cursor: pointer;
+          background: rgba(0,0,0,0.3)
+        }
+      }
+    }
+  }
+  // Estilos para el scrollbar
+  /* Tamaño del scroll */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+   /* Estilos barra (thumb) de scroll */
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+   /* Estilos track de scroll */
+  &::-webkit-scrollbar-track {
+    background: #e1e1e1;
+  }
+  &::-webkit-scrollbar-track:hover,
+  &::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+  }
+}
+
+/*
+* Estilos de la barra derecha
+*/
+.barra-derecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem;
+  padding-bottom: 2rem;
+  @media screen and (min-width: 540px) {
+    flex-direction: row;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 0;
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+  .contenedor-img-perfil {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: 540px) {
+      width: 30%;
+    }
+    @media screen and (min-width: 768px) {
+      width: 100%;
+      max-width: 11rem;
+    }
+  }
+  .contenedor-estadisticas {
+    width: 100%;
+    @media screen and (min-width: 992px) {
+      margin-top: -1.5rem;
+    }
+  }
+  .estadisticas {
+    @media screen and (min-width: 540px) {
+      padding-left: 1.7rem;
+    }
+    @media screen and (min-width: 768px) {
+      padding: 0 0.8rem;
+    }
+    @media screen and (min-width: 992px) {
+      padding: 0 1.7rem;
+    }
+  }
+  .dato {
+    position: relative;
+    .contenedor-icono {
+      max-width: 5rem;
+      margin-left: auto;
+      @media screen and (min-width: 768px) {
+        max-width: 2.4rem;
+      }
+      @media screen and (min-width: 992px) {
+        max-width: 5rem;
+      }
+    }
+    .contenedor-num {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      p {
+        background: rgba(255,255,255,0.5);
+        padding: 0.5rem;
+        padding-left: 0.9rem;
+        margin-right: 0.5rem;
+        border-radius: 0.3rem;
+        color: white;
+        font-weight: 700;
+      }
+    }
+  }
+}
