@@ -1,0 +1,108 @@
+main {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  main {
+    flex-direction: row;
+  }
+}
+
+.panel-izquierdo .contenedor-juego {
+  background: url("/public/img/bingo90/juego-Fon.png");
+  background-size: cover;
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+}
+.panel-izquierdo .contenedor-juego .contenedor-datos {
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.panel-izquierdo .contenedor-juego .contenedor-datos .datos {
+  display: flex;
+  background: rgba(0, 0, 200, 0.5);
+  padding: 1.5rem 1rem;
+}
+.panel-izquierdo .contenedor-juego .contenedor-datos .datos .tipo, .panel-izquierdo .contenedor-juego .contenedor-datos .datos .dato {
+  width: 33.3333%;
+  text-align: center;
+}
+.panel-izquierdo .banner-publicidad {
+  background: url("/public/img/bingo90/banner juego/2.png");
+  background-size: cover;
+}
+@media screen and (min-width: 992px) {
+  .panel-izquierdo {
+    height: calc(100vh - 6.4rem);
+    width: 70vw;
+  }
+  .panel-izquierdo .contenedor-juego {
+    min-height: 88%;
+  }
+  .panel-izquierdo .banner-publicidad {
+    background-position-x: right;
+    background-position-y: bottom;
+    height: 12%;
+  }
+}
+
+.panel-derecho {
+  background: #02e3e3;
+  padding: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 992px) {
+  .panel-derecho {
+    width: 30vw;
+    height: calc(100vh - 6.4rem);
+    padding: 0.8rem;
+  }
+}
+.panel-derecho .botones {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+.panel-derecho .botones button {
+  border: none;
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 0.1rem 1.4rem;
+  padding-bottom: 0;
+}
+.panel-derecho .botones button.activo {
+  background: transparent;
+}
+.panel-derecho .botones button:not(.activo) {
+  background: #306bba;
+  color: white;
+  border-radius: 0.2rem;
+}
+.panel-derecho .botones button:not(.activo):hover {
+  cursor: pointer;
+}
+@media screen and (min-width: 1200px) {
+  .panel-derecho .botones button {
+    font-size: 2rem;
+  }
+}
+.panel-derecho .grilla {
+  flex: 1;
+  display: grid;
+  grid-template-rows: repeat(15, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 0.4rem;
+  width: 100%;
+}
+.panel-derecho .grilla .cuadrado {
+  background: #306bba;
+}
+
+/*# sourceMappingURL=bingo90.css.map */
