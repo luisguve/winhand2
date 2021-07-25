@@ -8,7 +8,7 @@ main {
 
 .panel-izquierdo {
   .contenedor-juego {
-    background: url("/public/img/bingo90/juego-Fon.png");
+    background: url("/img/bingo90/juego-Fon.png");
     background-size: cover;
     width: 100%;
     display: flex;
@@ -31,7 +31,7 @@ main {
     }
   }
   .banner-publicidad {
-    background: url("/public/img/bingo90/banner juego/2.png");
+    background: url("/img/bingo90/banner juego/2.png");
     background-size: cover;
   }
   @media screen and (min-width: 992px) {

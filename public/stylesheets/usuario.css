@@ -16,7 +16,7 @@ main {
 }
 main content {
   min-height: calc(100vh - 15.8rem);
-  background-image: url("/public/img/dashboard/fon-base.png");
+  background-image: url("/img/dashboard/fon-base.png");
   background-size: cover;
   background-position: center;
   display: flex;

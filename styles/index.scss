@@ -1,6 +1,6 @@
 .hero {
   background-color: rgb(73,52,80);
-  background-image: url("/public/img/fondo banner.png");
+  background-image: url("/img/fondo banner.png");
   background-size: cover;
   background-position-x: 80%;
   min-height: 60vh;
@@ -151,12 +151,12 @@
   // Este fondo es para cuando el fondo de la seccion de objetivos este cargando.
   background: linear-gradient(90deg, #ffa5a5 0%, #d05dd2 50%, #5147e2 100%);
   .contenedor-objetivos {
-    background: url("/public/img/fondo.png");
+    background: url("/img/fondo.png");
     background-size: cover;
     background-repeat: no-repeat;
     .contenedor-donaplay {
       @media screen and (min-width: 768px) {
-        background-image: url("/public/img/donaplay.png");
+        background-image: url("/img/donaplay.png");
         background-repeat: no-repeat;
         background-position-x: calc(32vw + 218px);
         background-position-y: center;
@@ -204,7 +204,7 @@
     padding: 9.375rem 4.375rem;
   }
   .registro {
-    background: url("/public/img/loteria ttt.png");
+    background: url("/img/loteria ttt.png");
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
