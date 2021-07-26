@@ -1,0 +1,198 @@
+.panel-izquierdo {
+  .contenedor-juego {
+    background: url("/img/bingo90/juego-Fon.png");
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    overflow: auto;
+    @media screen and (min-width: 540px) {
+      height: calc(94vh - 5.8rem);
+    }
+    @media screen and (min-width: 768px) {
+      height: calc(90vh - 5.8rem);
+    }
+    @media screen and (min-width: 992px) {
+      padding-bottom: 0.5rem;
+    }
+    .contenedor-datos {
+      font-weight: 900;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 0.5rem;
+      margin: 1rem 0.3rem;
+      img {
+        width: 60%;
+        align-self: center;
+        margin: 1rem 0;
+      }
+      @media screen and (min-width: 768px) {
+        justify-content: center;
+        flex-direction: row-reverse;
+        align-items: center;
+        img {
+          width: 40%;
+          align-self: stretch;
+          margin: 0;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        img {
+          width: auto;
+        }
+      }
+      .datos {
+        display: flex;
+        flex-direction: column;
+        background: rgba(2,150,227,0.5);
+        padding: 0.5rem;
+        @media screen and (min-width: 768px) {
+          padding: 1.5rem 1rem;
+          flex-direction: row;
+          flex: 1;
+        }
+        @media screen and (min-width: 992px) {
+          flex: initial;
+        }
+        .tipo, .dato {
+          text-align: center;
+          margin: 0.2rem 0;
+          @media screen and (min-width: 768px) {
+            width: 33.3333%;
+          }
+        }
+        .tipo {
+          display: flex;
+          flex-direction: column;
+          .grilla {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            border-top: 1px solid white;
+            border-right: 1px solid white;
+            height: 2rem;
+            @media screen and (min-width: 540px) {
+
+            }
+            .cuadrado {
+              border-bottom: 1px solid white;
+              border-left: 1px solid white;
+            }
+          }
+        }
+        .dato {
+          font-size: 0.7rem;
+          @media screen and (min-width: 768px) {
+            font-size: 0.7rem;
+          }
+          @media screen and (min-width: 1200px) {
+            font-size: 1rem;
+          }
+          p {
+            background: rgba(2,227,227,0.5);
+            border-radius: 0.3rem;
+            font-size: 1.5rem;
+            margin: 0 0.5rem;
+            padding: 0.2rem 0;
+          }
+        }
+      }
+    }
+    .contenedor-cartones {
+      display: flex;
+      flex-direction: column;
+      padding: 0 0.5rem;
+      h1 {
+        font-size: 1.1rem;
+        background: rgba(0,0,0,0.5);
+        padding: 0.5rem 1rem;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+          padding: 0 1rem;
+          font-size: 1.8rem;
+          align-self: flex-start;
+          text-align: left;
+        }
+      }
+      .carton {
+        background: url("/img/bingo90/fon.png");
+        background-size: cover;
+        background-position: center;
+        margin: 0.3rem 0;
+        padding: 0.1rem 0.5rem;
+        padding-bottom: 0.4rem;
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width: 992px) {
+          min-height: 35%;
+        }
+        .cabecera {
+          display: flex;
+          justify-content: space-between;
+          img {
+            object-fit: contain;
+            width: 67%;
+          }
+        }
+        .datos {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          background: rgba(0,0,0,0.5);
+          @media screen and (min-width: 768px) {
+            padding: 0 1rem;
+          }
+        }
+        .grilla {
+          height: 100%;
+          display: grid;
+          grid-template-columns: repeat(9, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          background: rgba(124,81,130,0.5);
+          border-top: 1px solid #c9c9c9;
+          border-right: 1px solid #c9c9c9;
+          .cuadrado {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.5rem;
+            border-left: 1px solid #c9c9c9;
+            border-bottom: 1px solid #c9c9c9;
+            background: transparent;
+            height: 10vw;
+            filter: brightness(1.2);
+            @media screen and (min-width: 540px) {
+              height: 6vw;
+            }
+            @media screen and (min-width: 992px) {
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: 992px) {
+    height: calc(100vh - 6.4rem);
+    width: 70vw;
+    .contenedor-juego {
+      height: 88%;
+      flex-direction: row;
+      .contenedor-datos {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .contenedor-cartones {
+        overflow: auto;
+      }
+      .contenedor-datos, .contenedor-cartones {
+        width: 50%;
+      }
+    }
+  }
+}

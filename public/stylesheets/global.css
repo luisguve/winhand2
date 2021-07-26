@@ -1,11 +1,24 @@
+@charset "UTF-8";
 body {
   overflow-x: hidden;
+}
+@media screen and (min-width: 1400px) {
+  body {
+    background: #14292d;
+  }
 }
 
 * {
   margin: 0;
   font-family: sans-serif;
   box-sizing: border-box;
+}
+
+@media screen and (min-width: 1400px) {
+  main {
+    max-width: 90vw;
+    margin: auto;
+  }
 }
 
 nav {
@@ -166,8 +179,13 @@ a.btn.btn-negro:hover {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 539px) {
   .ocultar-movil {
+    display: none;
+  }
+}
+@media screen and (min-width: 540px) {
+  .ocultar-sm {
     display: none;
   }
 }
@@ -361,6 +379,31 @@ a.btn.btn-negro:hover {
   #menu .close {
     display: none;
   }
+}
+.custom-scrollbar {
+  /* Tamaño del scroll */
+  /* Estilos barra (thumb) de scroll */
+  /* Estilos track de scroll */
+}
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background-color: #999999;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #b3b3b3;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e1e1e1;
+}
+.custom-scrollbar::-webkit-scrollbar-track:hover, .custom-scrollbar::-webkit-scrollbar-track:active {
+  background: #d4d4d4;
 }
 
 /*# sourceMappingURL=global.css.map */

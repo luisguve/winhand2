@@ -1,0 +1,33 @@
+@use "panel-izquierdo";
+@use "panel-derecho";
+
+main {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 540px) {
+    flex-direction: row;
+  }
+}
+
+.banner-publicidad {
+  background: url("/img/bingo90/banner juego/2.png");
+  background-size: cover;
+  background-position-x: right;
+  background-position-y: bottom;
+  &.movil {
+    background: none;
+    height: 2rem;
+    img {
+      object-fit: contain;
+    }
+  }
+  @media screen and (min-width: 540px) {
+    height: 6vh;
+  }
+  @media screen and (min-width: 768px) {
+    height: 10vh;
+  }
+  @media screen and (min-width: 992px) {
+    height: 12%;
+  }
+}

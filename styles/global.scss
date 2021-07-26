@@ -1,10 +1,19 @@
 body {
   overflow-x: hidden;
+  @media screen and (min-width: 1400px) {
+    background: #14292d;
+  }
 }
 * {
   margin: 0;
   font-family: sans-serif;
   box-sizing: border-box;
+}
+main {
+  @media screen and (min-width: 1400px) {
+    max-width: 90vw;
+    margin: auto;
+  }
 }
 nav {
   position: relative;
@@ -131,8 +140,14 @@ a.btn {
     font-size: 1.25rem;
   }
 }
-@media screen and (max-width: 767px) {
+
+@media screen and (max-width: 539px) {
   .ocultar-movil {
+    display: none;
+  }
+}
+@media screen and (min-width: 540px) {
+  .ocultar-sm {
     display: none;
   }
 }
@@ -299,5 +314,33 @@ a.btn {
   }
   #menu .close {
     display: none;
+  }
+}
+
+// Estilos para el scrollbar
+.custom-scrollbar {
+  /* Tamaño del scroll */
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+   /* Estilos barra (thumb) de scroll */
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:active {
+    background-color: #999999;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #b3b3b3;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+   /* Estilos track de scroll */
+  &::-webkit-scrollbar-track {
+    background: #e1e1e1;
+  }
+  &::-webkit-scrollbar-track:hover,
+  &::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
   }
 }
