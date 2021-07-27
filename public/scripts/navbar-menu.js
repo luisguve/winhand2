@@ -20,21 +20,21 @@ function cerrarMenu() {
 }
 
 if (window.ethereum) {
-  handleEthereum();
+  handleEthereum("window");
 } else {
-  window.addEventListener('ethereum#initialized', handleEthereum, {
+  window.addEventListener('ethereum#initialized', () => handleEthereum("evento"), {
     once: true,
   });
 
   // If the event is not dispatched by the end of the timeout,
   // the user probably doesn't have MetaMask installed.
-  setTimeout(handleEthereum, 3000); // 3 seconds
+  setTimeout(() => handleEthereum("timeout"), 3000); // 3 seconds
 }
 
-function handleEthereum() {
+function handleEthereum(from) {
   const { ethereum } = window;
   if (ethereum && ethereum.isMetaMask) {
-    alert('Ethereum successfully detected!');
+    alert('MetaMask detectado desde ' + from);
     // Access the decentralized web!
   } else {
     alert('Please install MetaMask!');
